@@ -1,12 +1,3 @@
-import java.util.Scanner;
-class Node{
-    int data;
-    Node next;
-    Node(int data){
-        this.data = data;
-        this.next = null;
-    }
-}
 public class Traversal{
     public static void main(String[] args){
         //Creating a Linked List
