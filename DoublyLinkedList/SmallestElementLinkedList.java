@@ -19,7 +19,7 @@ public class SmallestElementLinkedList {
         Node head = null;
         // Create the list
         for (int i = 0; i < n; i++) {
-            System.out.print("Enter element: ");
+            System.out.print("Enter element "+(i+1)+": ");
             int data = sc.nextInt();
             Node newNode = new Node(data);
             if (head == null) {
