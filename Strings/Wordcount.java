@@ -1,21 +1,22 @@
 import java.util.Scanner;
-public class Wordcount{
-    public static void main(String[] args){
+
+public class Wordcount {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the string:");
-        String str = sc.nextLine();
+        System.out.print("Enter a string: ");
+        String sentence = sc.nextLine();
         int count = 0;
-        for(int i = 0; i<str.length();i++){
-            char ch = str.charAt(i);
-            if((!Character.isWhitespace(ch))&&(i == 0 || Character.isWhitespace(str.charAt(i - 1)))){
+        boolean inWord = false;
+        for (int i = 0; i < sentence.length(); i++) {
+            char ch = sentence.charAt(i);
+            if (Character.isWhitespace(ch)) {
+                inWord = false;
+            }
+            else if (!inWord) {
                 count++;
+                inWord = true;
             }
         }
         System.out.println("Number of words: " + count);
-
-        String str1 = "Java is a high level program.";
-        System.out.println(str1);
-        String[] word = str1.trim().split("\\s+");
-        System.out.println(word.length);
     }
 }
