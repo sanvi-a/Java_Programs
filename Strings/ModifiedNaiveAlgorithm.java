@@ -33,3 +33,5 @@ public class ModifiedNaiveAlgorithm {
         search(pat, str);
     }
 }
+
+
